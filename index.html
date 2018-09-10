@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+        
+		<title>Packers Radio Map</title>
+        <link rel="icon" href="img/microphone.ico">
+        
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+        <link rel="stylesheet" href="lib/leaflet/leaflet.css">
+        <link rel="stylesheet" href="css/leaflet-easy-button.css">
+        <link rel="stylesheet" href="css/style.css">
+
+	</head>
+
+	<body>
+
+        <!--HOME/SPLASH-->
+        
+        <div id='mapid'></div>
+        <div id='overlay'>
+            <br><br><br><br>
+            <h2 class='overlay-text'>Green Bay Packers Radio Station Finder Map</h2>
+            <p class='overlay-text'>Driving through Wisconsin on an autumn Sunday afternoon? Use this application to find the Packers radio affiliate stationed nearest you!</p>
+            <p class='overlay-text'>Click the pin button (bottom right) to locate your current position. Then click or tap on the map to see which stations around you have the best chances of coming in clearly.</p>
+            <p class='overlay-text'>Developed by <a href='http://jmjfisher.com/' target="_blank">JohnMark Fisher</a>.</p>
+            <br>
+            <button id='button' type='button'>Go To Map</button>
+        </div>
+        
+        <!--SCRIPTS-->
+
+        <script type="text/javascript" src="lib/jquery.min.js"></script>
+        <script type="text/javascript" src="lib/topojson.js"></script>
+        <script type="text/javascript" src="lib/d3.min.js"></script>
+        <script type="text/javascript" src="lib/d3-queue.min.js"></script>
+        <script type="text/javascript" src="lib/leaflet/leaflet.js"></script>
+        <script type="text/javascript" src="lib/leaflet-easybutton.js"></script>
+
+        <script type="text/javascript" src="js/main.js"></script>
+        
+	</body>
+    
+</html>
