@@ -61,9 +61,10 @@ function createMap(){
         //call function to get everything else available
         var outlineOptions = {
             color: "#203731",
-            weight: 2,
+            weight: 2.5,
             opacity: 0.8,
-            fillOpacity: 0
+            fillColor: "#203731",
+            fillOpacity: 0.1
         };
     
         L.geoJSON(polygons,{
@@ -72,6 +73,13 @@ function createMap(){
             }).addTo(map);
 
     };
+    
+    var myIcon = L.icon({
+        iconUrl: 'img/logo.svg',
+        iconSize: [38, 95],
+    });
+    
+    L.marker([44.501417, -88.062208], {icon: myIcon}).addTo(map);
 
     $(".leaflet-control-container").on('mousedown dblclick pointerdown wheel', function(ev){
         L.DomEvent.stopPropagation(ev);

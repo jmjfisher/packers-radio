@@ -8,6 +8,8 @@
         <link rel="icon" href="img/icon.svg">
         
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+        <link rel="stylesheet" href="http://allfont.net/allfont.css?fonts=stencil"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allerta+Stencil"> 
         <link rel="stylesheet" href="lib/leaflet/leaflet.css">
         <link rel="stylesheet" href="css/leaflet-easy-button.css">
         <link rel="stylesheet" href="css/style.css">
@@ -16,17 +18,18 @@
 
 	<body>
 
-        <!--HOME/SPLASH-->
-        
         <div id='mapid'></div>
         <div id='overlay'>
             <br><br><br><br>
-            <h2 class='overlay-text'>Green Bay Packers Radio Station Finder Map</h2>
-            <p class='overlay-text'>Driving through Wisconsin on an autumn Sunday afternoon? Use this application to find the Packers radio affiliate stationed nearest you!</p>
-            <p class='overlay-text'>Click the pin button (bottom right) to locate your current position. Then click or tap on the map to see which stations around you have the best chances of coming in clearly.</p>
-            <p class='overlay-text'>Developed by <a href='http://jmjfisher.com/' target="_blank">JohnMark Fisher</a>.</p>
-            <br>
-            <button id='button' type='button'>Go To Map</button>
+            <h2 class='overlay-text'>GREEN BAY PACKERS RADIO STATION MAP</h2>
+            <div id='intro'>
+                <p class='overlay-text'>Traveling through Wisconsin during a Packers game? Use this mobile-friendly application to find the <a href='https://www.packers.com/video/radio-network' target="_blank">Packers Radio Network</a> affiliate nearest you!</p>
+                <p class='overlay-text'>Click the pin (bottom right) to pan the map to your current location then click on the map to see the frequencies of the stations around you.</p>
+                <br>
+                <button id='button' type='button'>Go (Pack Go) To Map</button>
+                <br><br>
+                <p id='dev' class='overlay-text'>Developed by <a href='http://jmjfisher.com/' target="_blank">JohnMark Fisher</a></p>
+            </div>
         </div>
         
         <!--SCRIPTS-->
