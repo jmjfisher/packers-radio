@@ -15,13 +15,17 @@ function createMap(){
     var map = L.map('mapid', {
         maxZoom: 18,
         zoomControl: true
-    }).setView([44.75, -89.45], zoom);
+    }).setView([44.75, -89.6], zoom);
    
     var streets = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/light-v9/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1Ijoiam1qZmlzaGVyIiwiYSI6ImNqYXVlNDg3cDVhNmoyd21oZ296ZXpwdWMifQ.OGprR1AOquImP-bemM-f2g').addTo(map);
     
-    L.easyButton('fa-map-pin', function(btn, map){
-        locate(map)
-    },'Find your location',{position: 'bottomright'}).addTo(map);
+    L.control.locate({
+        position: 'bottomright',
+        flyTo: true,
+        locateOptions: {
+            maxZoom: 9
+        }
+    }).addTo(map);
     
     L.easyButton('fa-question-circle', function(btn, map){
         $('#overlay').css("display","block")
@@ -74,22 +78,5 @@ function createMap(){
     });
     
 }; // end of createMap
-
-function locate(map){
-    
-    map.locate({setView: true, maxZoom: 10});
-    
-    function onLocationFound(e) {
-        var options = {
-            radius: 1000,
-            wight: 3,
-            color: '#FFB612',
-            fillColor: '#FFB612',
-            fillOpacity: 0.5
-        }
-        L.circle(e.latlng, options).addTo(map);
-    }
-    map.on('locationfound', onLocationFound);
-}
 
 $(document).ready(createMap);
