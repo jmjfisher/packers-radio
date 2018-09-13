@@ -46,11 +46,11 @@ function createMap(){
             var geoid = feature.properties['GEOID'];
             for (i=0; i<radioCSV.length; i++){
                 if (radioCSV[i]["GEOID"]==geoid){
-                    popupContent += '<br><b>'+radioCSV[i]["NUM"]+' '+radioCSV[i]["FRQ"]+'</b> '+radioCSV[i]["STATION"]+' '+radioCSV[i]["MARKET"]+', '+radioCSV[i]["ST"]
+                    popupContent += '<br><b>'+radioCSV[i]["NUM"]+' '+radioCSV[i]["FRQ"]+'</b> - '+radioCSV[i]["STATION"]+' '+radioCSV[i]["MARKET"]+', '+radioCSV[i]["ST"]
                 };
             }
             layer.bindPopup(popupContent, {
-                offset: [0,-7],
+                offset: [0,24],
                 direction: 'top',
                 className: 'popupStation'});
         }; // end of  stationNAME

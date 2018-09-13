@@ -66,4 +66,22 @@ a {
     color: #FFB612;
 }
 
+.leaflet-popup-content-wrapper {
+    background: #203731;
+    font-family: sans-serif;
+    color: #FFB612;
+    font-size:14px;
+    line-height:24px;
+    border-radius: 0px;
+    border: 2px solid #FFB612;
+}
+
+.leaflet-popup-tip-container {
+    opacity: 0;
+  }
+
+.leaflet-container a.leaflet-popup-close-button {
+    color: #FFB612;
+  }
+
 .leaflet-control-locate a{font-size:1.4em;color:#444;cursor:pointer}.leaflet-control-locate.active a{color:#2074B6}.leaflet-control-locate.active.following a{color:#FC8428}
